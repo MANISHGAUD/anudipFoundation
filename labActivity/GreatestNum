@@ -1,0 +1,24 @@
+package LAB_DAY2;
+
+public class GreatestNumWhile {
+
+	public static void main(String[] args) {
+		int a = 5;
+		int b = 6;
+		int c = 3;
+		int d = 9 ;
+		if(a>b) {
+			System.out.println("a is greatest num");
+		}
+		if(b>c) {
+			System.out.println("b is greatest num");
+		}
+		if(c>d) {
+			System.out.println("c is greatest num");
+		}
+		else {
+			System.out.println("d is greatest num");
+		}
+	}
+
+}
