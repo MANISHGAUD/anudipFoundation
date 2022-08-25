@@ -1,0 +1,95 @@
+package inheritance;
+interface libaryuser {
+	void ragisterAccount();
+	void requestBook();
+	
+}
+class kiduser implements libaryuser{
+	int age;
+	String booktype;
+	
+	public void ragisterAccount(){
+		if(age<12) {
+			System.out.println("You have successfully registered under a Kids Account");
+		}
+		else {
+			System.out.println("sorry age must be less than 12 to ragister as a kids");
+		}
+		
+	}
+	public void requestBook(){
+		if(booktype == "kids") {
+			System.out.println("Book Issued successfully, please return the book within 10 days");
+		}else {
+			System.out.println("Oops, you are allowed to take only kids books");
+			
+		}
+		
+	}
+}
+class adaltuser implements libaryuser{
+	int age;
+	String booktype;
+	public void ragisterAccount() {
+		if(age>12) {
+			System.out.println("You have successfully registered under an Adult Account");
+		}else {
+			System.out.println("“Sorry, Age must be greater than 12 to register as an adult”");
+		}
+		
+	}
+	public void requestBook() {
+		if(booktype == "fiction") {
+			System.out.println("“Book Issued successfully, please return the book within 7 days");
+		}
+		else {
+			System.out.println("Oops, you are allowed to take only adult Fiction books");
+		}
+		
+	}
+}
+
+public class LibaryInterfaceDemo {
+	public static void main(String[] args) {
+		kiduser k1 = new kiduser();
+		kiduser k2 = new kiduser();
+		
+		k1.age=10;
+		k2.age=18;
+		
+		k1.booktype="kids";
+		k2.booktype="fiction";
+		
+		k1.requestBook();
+		k1.ragisterAccount();
+		System.out.println();
+		
+		k2.ragisterAccount();
+		k2.requestBook();
+		
+		adaltuser a1 = new adaltuser();
+		adaltuser a2 = new adaltuser();
+		
+		
+		a1.age=5;
+		a2.age=23;
+		
+		a1.booktype="kids";
+		a2.booktype="fcition";
+		
+		a1.ragisterAccount();
+		a1.requestBook();
+		
+		System.out.println();
+		a2.ragisterAccount();
+		a2.requestBook();
+		
+		
+		
+		
+		
+		
+	}
+
+}
+
